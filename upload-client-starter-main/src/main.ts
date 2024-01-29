@@ -64,7 +64,7 @@ const login = async (): Promise<LoginResponse> => {
   return loginResponse.data.login;
 };
 
-// TODO: function to upload a file
+// function to upload a file
 const uploadFile = async (): Promise<UploadResponse> => {
   const formData = new FormData();
   if (fileInput && fileInput.files) {
@@ -85,7 +85,7 @@ const uploadFile = async (): Promise<UploadResponse> => {
   return uploadResponse;
 };
 
-// TODO funtion to post a file to the API
+// funtion to post a file to the API
 const postFile = async (uploadResponse: UploadResponse) => {
   const query = `
   mutation CreateMediaItem($input: MediaItemInput!) {
@@ -250,7 +250,7 @@ if (loginForm) {
   });
 }
 
-// TODO: file form event listener
+// file form event listener
 // event listener should call uploadFile function to upload the file
 // then call postFile function to post the file to the GraphQL API
 // then call addFileToDom to update the DOM with the file data
